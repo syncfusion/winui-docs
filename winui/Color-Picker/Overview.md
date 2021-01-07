@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of WinUI SfColorPicker control | Syncfusion
-description: WinUI SfColorPicker control used to notify users of new or unread messages, notifications, or the status of something and different features.
+description: WinUI SfColorPicker control is a rich visual interface with different types of color items for color selection.
 platform: WinUI
 control: SfColorPicker
 documentation: ug
@@ -18,9 +18,6 @@ The [ColorPicker](https://help.syncfusion.com/cr/winUI/Syncfusion.UI.Xaml.Editor
 ## Key features
 
 * Color Editing - Drag the handle to pick your favorite color in the picker region or set the color values manually with input control (RGB or HSV or HSL or CMYK or Hex codes).
-
 * A slider displaying the Hue spectrum, allowing for selection of a hue value.
-
 * Gradient Editor - Sliders capable of altering the stops of a linear or radial brush.
-
 * Supports ToolTip to show the selected color while dragging the picker in ColorEdit control.

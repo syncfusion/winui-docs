@@ -13,13 +13,13 @@ In addition to colors in `Theme colors` and `Standard colors`, `MoreColor` featu
 
 ## Select a color from MoreColor dialog
 
-If you wants any custom colors to select with various opacity level, click the more color button and select the color from color spectrum and click the `Ok` button. 
+If you wants any custom colors to select with various opacity level, click the more color button and select the color from color spectrum and then click the `Ok` button. 
 
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfColorPalette ShowMoreColorsButton="true"
-                           Name="colorPalette"/>
+<editors:SfColorPalette ShowMoreColorsButton="true"
+                        Name="colorPalette"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -40,8 +40,8 @@ If you want to restrict the user to select the color from `MoreColor` dialog, hi
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfColorPalette ShowMoreColorsButton="False"
-                           Name="colorPalette" />
+<editors:SfColorPalette ShowMoreColorsButton="False"
+                        Name="colorPalette" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -51,6 +51,6 @@ colorPalette.ShowMoreColorsButton = false;
 {% endhighlight %}
 {% endtabs %}
 
-![ColorPalette hides the more color option](Working-with-SfColorPalette_images/ShowDefaultColorButton.png)
+![ColorPalette hides the more color option](Working-with-SfColorPalette_images/ShowMoreColorsButton.png)
 
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/syncfusion-winui-colorpalette-examples/blob/master/Samples/ColorPalette_features)
