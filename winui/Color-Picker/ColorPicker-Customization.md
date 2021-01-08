@@ -19,15 +19,15 @@ You can change the color selection mode directly at runtime by clicking on the c
 
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/syncfusion-winui-colorpicker-examples/tree/master/Samples/SelectGradientColors)
 
-## Enable specific brush modes
+## Enable specific brush mode
 
 You can enable the user to choose either `Solid`, `Linear` or `Radial` gradient brush or any combination of brush mode by using the `BrushTypeOptions` property. 
 
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfColorPicker BrushTypeOptions="SolidColorBrush,RadialGradientBrush"
-                          Name="colorPicker">
+<editors:SfColorPicker BrushTypeOptions="SolidColorBrush,RadialGradientBrush"
+                       Name="colorPicker">
 
 {% endhighlight %}
 {% highlight C# %}
@@ -48,9 +48,9 @@ By default, color spectrum is in box shapes. If you want to change the color spe
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfColorPicker ColorSpectrumShape="Ring" 
-                          BrushTypeOptions="LinearGradientBrush"
-                          Name="colorPicker">
+<editors:SfColorPicker ColorSpectrumShape="Ring" 
+                       BrushTypeOptions="LinearGradientBrush"
+                       Name="colorPicker">
 
 {% endhighlight %}
 {% highlight C# %}
@@ -74,9 +74,9 @@ You can changes the color spectrum components as any combination of hue, saturat
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfColorPicker ColorSpectrumComponents = "HueSaturation"
-                          BrushTypeOptions="LinearGradientBrush"
-                          Name="colorPicker">
+<editors:SfColorPicker ColorSpectrumComponents = "HueSaturation"
+                       BrushTypeOptions="LinearGradientBrush"
+                       Name="colorPicker">
 
 {% endhighlight %}
 {% highlight C# %}
