@@ -17,7 +17,7 @@ The TreeView provides an entirely customizable context flyout to expose the func
 
 You can set context flyout for the nodes by using [SfTreeView.ItemContextFlyout](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.TreeView.SfTreeView.html#Syncfusion_UI_Xaml_TreeView_SfTreeView_ItemContextFlyout) property.
 
-## Built-in Commands
+## Built-in commands
 
 The TreeView provides support for the following built-in commands
 
@@ -27,25 +27,25 @@ The TreeView provides support for the following built-in commands
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="sfTreeView"
+<treeView:SfTreeView x:Name="sfTreeView"
 				ItemsSource="{Binding Folders}"
 				ChildPropertyName="SubFiles"
                 AllowEditing="True"
                 SelectionMode="Multiple">
-		<syncfusion:SfTreeView.ItemContextFlyout>
+		<treeView:SfTreeView.ItemContextFlyout>
             <MenuFlyout>
-                <MenuFlyoutItem x:Name="Edit" Text="Edit" Command="{x:Bind syncfusion:TreeViewCommands.Edit}" CommandParameter="{Binding }"/>
-                <MenuFlyoutItem x:Name="DeleteNode" Text="Delete Node" Command="{x:Bind syncfusion:TreeViewCommands.DeleteNode}" CommandParameter="{Binding }"/>
-                <MenuFlyoutItem x:Name="DeleteSelectedNodes" Text="Delete Selected Nodes" Command="{x:Bind syncfusion:TreeViewCommands.DeleteSelectedNodes}" CommandParameter="{Binding }"/>
+                <MenuFlyoutItem x:Name="Edit" Text="Edit" Command="{x:Bind treeView:TreeViewCommands.Edit}" CommandParameter="{Binding }"/>
+                <MenuFlyoutItem x:Name="DeleteNode" Text="Delete Node" Command="{x:Bind treeView:TreeViewCommands.DeleteNode}" CommandParameter="{Binding }"/>
+                <MenuFlyoutItem x:Name="DeleteSelectedNodes" Text="Delete Selected Nodes" Command="{x:Bind treeView:TreeViewCommands.DeleteSelectedNodes}" CommandParameter="{Binding }"/>
             </MenuFlyout>
-        </syncfusion:SfTreeView.ItemContextFlyout>
-</syncfusion:SfTreeView>
+        </treeView:SfTreeView.ItemContextFlyout>
+</treeView:SfTreeView>
 {% endhighlight %}
 {% endtabs %}
 
 ![WinUI TreeView with ContextFlyout using built-in commands](ContextFlyout_images/ContextFlyout_image1.png)
 
-## Custom Commands
+## Custom commands
 
 The TreeView allows to show context flyout using custom commands when built-in commands does not meet your requirement.
 
@@ -53,17 +53,17 @@ For an example, custom command is used to expand the nodes using context flyout 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfTreeView x:Name="sfTreeView"
+<treeView:SfTreeView x:Name="sfTreeView"
 				ItemsSource="{Binding Folders}"
 				ChildPropertyName="SubFiles"
                 AllowEditing="True"
                 SelectionMode="Multiple">
-    <syncfusion:SfTreeView.ItemContextFlyout>
+    <treeView:SfTreeView.ItemContextFlyout>
         <MenuFlyout>
             <MenuFlyoutItem x:Name="Expand" Text="Expand" Command="{Binding TreeView.DataContext.ExpandCommand}" CommandParameter="{Binding }"/>
         </MenuFlyout>
-    </syncfusion:SfTreeView.ItemContextFlyout>
-</syncfusion:SfTreeView>
+    </treeView:SfTreeView.ItemContextFlyout>
+</treeView:SfTreeView>
 {% endhighlight %}
 {% highlight c# %}
 using Syncfusion.UI.Xaml.Core;
