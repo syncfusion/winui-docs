@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Day, Week, Work Week views | WinUI | Scheduler | Syncfusion
-description: Learn how to customize the Scheduler Day, Week, Workweek views settings and its appearance in the WinUI Calendar (SfScheduler)
+title: Day and Week Views in WinUI Scheduler control | Syncfusion
+description: Learn here all about Day and Week Views support in Syncfusion WinUI Scheduler(SfScheduler) control and more.
 platform: winui
 control: Scheduler
 documentation: ug
 ---
 
-# Day and Week Views in WinUI Scheduler (SfSchedule)
+# Day and Week Views in WinUI Scheduler
+
 The [Scheduler](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.SfScheduler.html) supports to display the day, week, workweek views, and the current day will be visible by default. The appointments on a specific day will be arranged in the respective timeslots based on their duration.
 
 ## Change time duration
@@ -223,6 +224,29 @@ this.Schedule.DaysViewSettings.SpecialTimeRegions.Add(new SpecialTimeRegion
 The [SpecialTimeRegion](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.SpecialTimeRegion.html) can be customized on a date basis by setting the value of [CanMergeAdjacentRegions](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.SpecialTimeRegion.html#Syncfusion_UI_Xaml_Scheduler_SpecialTimeRegion_CanMergeAdjacentRegions) to false.
 
 ![special-time-region-customization-in-datebasis-in-winui-scheduler-timeslot-views](DayandWeekViews_Images/adding-special-time-region-customization-in-datebasis-in-winui-scheduler.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/WinUI-Scheduler-Examples/tree/main/SpecialTimeRegionCustomization)
+
+## Full screen scheduler
+
+The WinUI scheduler time interval height can be adjusted based on screen height by changing the value of [TimeIntervalSize](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.TimeSlotViewSettings.html#Syncfusion_UI_Xaml_Scheduler_TimeSlotViewSettings_TimeIntervalSize) property to `-1.` It will auto-fit to the screen height in day , week and workweek views.
+
+{% tabs %}
+{% highlight xaml %}
+<scheduler:SfScheduler x:Name="Schedule" ViewType="Week">
+    <scheduler:SfScheduler.DaysViewSettings>
+        <scheduler:DaysViewSettings 
+            TimeIntervalSize="-1"/>
+    </scheduler:SfScheduler.DaysViewSettings>
+</scheduler:SfScheduler>
+{% endhighlight %}
+{% highlight c# %}
+this.Schedule.ViewType = SchedulerViewType.Week;
+this.Schedule.DaysViewSettings.TimeIntervalSize = -1;
+{% endhighlight %}
+{% endtabs %}
+
+![full-screen-scheduler-in-winui-scheduler-timeslot-views](DayandWeekViews_Images/full-screen-scheduler-in-winui-scheduler.png)
 
 ## Change time ruler width
 

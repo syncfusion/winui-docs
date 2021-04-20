@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Timeline views | WinUI | Scheduler | Syncfusion
-description: Learn how to customize the Scheduler Timeline view settings and its appearance in Syncfusion WinUI Scheduler (SfScheduler)
+title: Timeline Views in WinUI Scheduler control | Syncfusion
+description: Learn here all about Timeline Views support in Syncfusion WinUI Scheduler(SfScheduler) control and more.
 platform: winui
 control: Scheduler
 documentation: ug
 ---
 
-# Timeline Views in WinUI Scheduler (SfScheduler)
+# Timeline Views in WinUI Scheduler
 
 The TimelineView displays the dates in the horizontal time axis with the desired day’s count. Scheduler supports displaying the `TimelineDay,` `TimelineWeek,` `TimelineWorkWeek,` and `TimelineMonth` views. You can see the past or future dates by scrolling to the right or left. Each view displays the events accurately across the time slots with an intuitive drag-and-drop feature. It provides the support to highlight the selected region of time slots and handle the interaction.
 
@@ -251,6 +251,29 @@ this.Schedule.TimelineViewSettings.SpecialTimeRegions.Add(new SpecialTimeRegion
 {% endtabs %}
 
 ![special-time-region-customization-in-winui-scheduler](TimelineViews_Images/adding-special-time-region-customization-in-winui-scheduler.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/WinUI-Scheduler-Examples/tree/main/SpecialTimeRegionCustomization)
+
+## Full screen scheduler
+
+The WinUI scheduler time interval width can be adjusted based on screen height by changing the value of [TimeIntervalSize](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Scheduler.TimeSlotViewSettings.html#Syncfusion_UI_Xaml_Scheduler_TimeSlotViewSettings_TimeIntervalSize) property to `-1.` It will auto-fit to the screen width in timeline day , timeline week and timeline workweek views.
+
+{% tabs %}
+{% highlight xaml %}
+<scheduler:SfScheduler x:Name="Schedule" ViewType="TimelineWeek">
+    <scheduler:SfScheduler.TimelineViewSettings>
+        <scheduler:TimelineViewSettings 
+            TimeIntervalSize="-1"/>
+    </scheduler:SfScheduler.TimelineViewSettings>
+</scheduler:SfScheduler>
+{% endhighlight %}
+{% highlight c# %}
+this.Schedule.ViewType = SchedulerViewType.TimelineWeek;
+this.Schedule.TimelineViewSettings.TimeIntervalSize = -1;
+{% endhighlight %}
+{% endtabs %}
+
+![full-screen-scheduler-in-winui-scheduler](TimelineViews_Images/full-screen-scheduler-in-winui-scheduler.png)
 
 ## Change time ruler size
 
