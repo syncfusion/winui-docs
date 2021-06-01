@@ -1,19 +1,19 @@
 ---
 layout: post
 title: About WinUI Calendar control | Syncfusion
-description: Learn about introduction of Syncfusion WinUI Calendar control of month, year, decade navigation support.
+description: Learn here all about introduction of Syncfusion WinUI Calendar (SfCalendar) control, its features, and more.
 platform: winui
 control: SfCalendar
 documentation: ug
 ---
 
-# WinUI Calendar Overview
+# WinUI Calendar (SfCalendar) Overview
 
 The [WinUI Calendar](https://www.syncfusion.com/winui-controls/calendar) control allows users to view and interact with a calendar so that they can navigate by month, year, decade, or century. A user can select a single date or multiple dates or a range of dates. It supports different date formats and cells UI customization. Date selection can be restricted by specifying minimum and maximum dates. Specific dates can also disabled from selection.
 
 ## Control structure
 
-![WinUI Calendar control](Getting-Started_images/overview.png)
+![WinUI Calendar Control](Getting-Started_images/winui-calendar-control.png)
 
 ## Key Features
 

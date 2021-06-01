@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localize the WinUI Calendar control | Syncfusion
-description: This section describes how to localize and customize formats in Calendar (SfCalendar) control into WinUI application.
+title: Localization and Formatting in WinUI Calendar control | Syncfusion
+description: Learn here all about how to localize and customize formats in Calendar (SfCalendar) control and more.
 platform: WinUI
 control: SfCalendar
 documentation: ug
 ---
 
-# Localize and change format in WinUI Calendar
+# Localize and change format in WinUI Calendar (SfCalendar)
 
 This section describes how to localize [Calendar](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Calendar.SfCalendar.html) control using [`CalendarIdentifier`](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Calendar.SfCalendar.html#Syncfusion_UI_Xaml_Calendar_SfCalendar_CalendarIdentifier) and `Language` properties and to change the display formats.
 
@@ -48,7 +48,7 @@ sfCalendar.CalendarIdentifier = "HebrewCalendar";
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying Hebrew-type WinUI Calendar.](Getting-Started_images/CalendarIdentifier.png)
+![WinUI Hebrew Calendar-Calendar Identifier](Getting-Started_images/winui-hebrew-calendar.png)
  
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/syncfusion-winui-tools-calendar-examples/blob/main/Samples/Formatting)
 
@@ -66,12 +66,12 @@ You can localize the calendar using the `Language` property. The default value o
 {% highlight C# %}
 
 SfCalendar sfCalendar = new SfCalendar();
-sfCalendar.Language = "fr";
+sfCalendar.Language = "fr-FR";
 
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying french cultured WinUI Calendar.](Getting-Started_images/Language.png)
+![WinUI French Calendar](Getting-Started_images/winui-french-calendar.png)
 
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/syncfusion-winui-tools-calendar-examples/blob/main/Samples/Formatting)
 
@@ -94,7 +94,7 @@ sfCalendar.FirstDayOfWeek = DayOfWeek.Monday;
 {% endhighlight %}
 {% endtabs %}
 
-![WinUI Calendar weekdays start from Monday](Getting-Started_images/first-day-of-week.png)
+![WinUI Calendar First Day of Week](Getting-Started_images/winui-calendar-first-day-of-week.png)
 
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/syncfusion-winui-tools-calendar-examples/blob/main/Samples/Selection)
 
@@ -119,7 +119,7 @@ sfCalendar.FlowDirection = FlowDirection.RightToLeft;
 {% endhighlight %}
 {% endtabs %}
 
-![Calendar flow direction changed to right to left](Getting-Started_images/FlowDirection.png)
+![WinUI Calendar Right-to-Left](Getting-Started_images/winui-calendar-right-to-left.png)
 
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/syncfusion-winui-tools-calendar-examples/blob/main/Samples/Formatting)
 
@@ -150,7 +150,7 @@ sfCalendar.MonthHeaderFormat = "{month.abbreviated} {year.abbreviated}‎";
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying full month and abbreviated year format in WinUI Calendar.](Getting-Started_images/dateformat.gif)
+![WinUI Calendar Date Formatting](Getting-Started_images/winui-calendar-date-formatting.gif)
 
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/syncfusion-winui-tools-calendar-examples/blob/main/Samples/Formatting)
 
@@ -173,7 +173,7 @@ sfCalendar.NumberOfWeeksInView = 3;
 {% endhighlight %}
 {% endtabs %}
 
-![Show particular weeks in WinUI Calendar](Getting-Started_images/weeks-in-view.png)
+![WinUI Calendar Showing Only Limited Weeks in View](Getting-Started_images/winui-calendar-weeks-in-view.png)
 
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/syncfusion-winui-tools-calendar-examples/blob/main/Samples/Selection)
 
