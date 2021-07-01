@@ -48,6 +48,14 @@ Use to display the boolean type data
 </tr>
 <tr>
 <td>
+{{'[GridDateColumn](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.DataGrid.GridDateColumn.html)'| markdownify }}
+</td>
+<td>
+Use to display the date value.
+</td>
+</tr>
+<tr>
+<td>
 {{'[GridImageColumn](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.DataGrid.GridImageColumn.html)'| markdownify }}
 </td>
 <td>
@@ -390,9 +398,9 @@ Below screenshot shows the customized header template loaded on the header of Or
 
 #### Data Annotations with AutoGenerateColumns
 
-SfDataGrid support to generate the columns based on built-in [Data Annotation Attributes](https://msdn.microsoft.com/en-us/library/mt185499.aspx). 
+SfDataGrid support to generate the columns based on built-in data annotation attributes. 
 
-Data Annotations ignored, when the `AutoGenerateColumns` is set to `False`.
+Data annotations are ignored, when the `AutoGenerateColumns` is set to `False`.
 
 ##### Exclude column
 
@@ -475,7 +483,7 @@ public string ShipCity
 
 The OrderID and CustomerID column rearranged based on specified order.
 
-![WinUI DataGrid displays changing Order of Columns](Columns-images/winui-datagrid-column-order.png)
+![Changing order of columns in WinUI DataGrid](Columns-images/winui-datagrid-column-order.png)
 
 ### Manually defining columns
 
@@ -825,5 +833,5 @@ Below code, binds the `ViewModel.AllowFiltering` property to `GridColumn.AllowFi
 {% endtabs %}
 
 
-![Data Binding in WinUI DataGrid](Columns-images/winui-datagrid-binding-column.png)
+![Data Binding of Column in WinUI DataGrid](Columns-images/winui-datagrid-binding-column.png)
 
