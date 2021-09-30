@@ -17,13 +17,13 @@ This section explains the steps required to add the [WinUI NumberBox](https://ww
 
 ## Creating an application with WinUI NumberBox
 
-In this walkthrough, you will create a WinUI application that contains the [NumberBox](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox) control.
+In this walkthrough, you will create a WinUI application that contains the [NumberBox](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox.html) control.
 
 ## Adding control manually in XAML
 
 To add `NumberBox` control manually in XAML, follow the below steps.
 
-1. Create a [WinUI 3 desktop app for C# and .NET 5](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/get-started-winui3-for-desktop) or [WinUI 3 app in UWP for C#](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/get-started-winui3-for-uwp).
+1. Create a [WinUI 3 desktop app for C# and .NET 5](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/get-started-winui3-for-desktop).
 2.  Download and refer the following NuGet package in the project.
 
     * [Syncfusion.Editors.WinUI](https://www.nuget.org/packages/Syncfusion.Editors.WinUI)
@@ -95,7 +95,7 @@ namespace GettingStarted
 
 ## Editing the value
 
-By default, the [NumberBox](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox) control allows you to enter numeric input and restricts the alphabetic input. Once `Enter` key is pressed or control focus is lost, the value of the `NumberBox` control is validated and updated based on the format applied.
+By default, the [NumberBox](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox.html) control allows you to enter numeric input and restricts the alphabetic input. Once `Enter` key is pressed or control focus is lost, the value of the `NumberBox` control is validated and updated based on the format applied.
 
 {% tabs %}
 {% highlight xaml %}
@@ -192,9 +192,82 @@ sfNumberBox.AllowNull = false;
 
 ![WinUI NumberBox prevent empty textbox](GettingStarted_images/allowNull.gif)
 
+## Header and description
+This section explains about `header` and `description` properties of NumberBox.
+### Header
+The `Header` property is used to display the title for the `NumberBox` Control.
+     
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumberBox x:Name="numberBox" 
+                     Height="75" 
+                     Width="300" 
+                     Header="Amount to withdraw" 
+                     Value="100" />
+
+ 
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumberBox SfNumberBox = new SfNumberBox();
+SfNumberBox.Header = "Amount to withdraw";
+
+{% endhighlight %}
+{% endtabs %}
+
+![WinUI NumberBox with Header](GettingStarted_images/header_text.png)
+
+#### Header customization
+By using the controls `HeaderTemplate` property, you can customize the appearance of controls' header. The following code sample shows how to use a header template to customize the header.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumberBox Value="100" CustomFormat="#,0.00" Width="250" Height="75">
+            <editors:SfNumberBox.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                       <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEF40;"/>
+                       <TextBlock Text="Amount" FontSize="14" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </editors:SfNumberBox.HeaderTemplate>
+  </editors:SfNumberBox>
+
+{% endhighlight %}
+{% endtabs %}
+
+![WinUI NumberBox with Header Template](GettingStarted_images/header_template.png)
+
+### Description
+The `Description` support is used to display the content beneath the control as well as to provide guidance on the input that the control expects.
+
+{% tabs %}
+{% highlight xaml %}
+   
+<editors:SfNumberBox x:Name="numberBox" 
+                      Height="75"
+                      Width="300" 
+                      Value="10"  
+                      Description="Please enter only positive digit."/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumberBox SfNumberBox = new SfNumberBox();
+SfNumberBox.Description = “Please enter only positive digit.”;
+
+
+{% endhighlight %}
+{% endtabs %}
+
+![WinUI NumberBox with Description](GettingStarted_images/description_text.png)
+
+
 ## Setting watermark text
 
-You can prompt the user with any information by using the [PlaceHolderText](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox.html#Syncfusion_UI_Xaml_Editors_SfNumberBox_PlaceholderText) property. Watermark text will be displayed only when the value of the [AllowNull](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox.html#Syncfusion_UI_Xaml_Editors_SfNumberBox_AllowNull) property is **true** and the value of `NumberBox` control is **null**. The default value of `PlaceHolderText` property is **string.Empty** (No string will be displayed).
+You can prompt the user with any information by using the [PlaceholderText](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox.html#Syncfusion_UI_Xaml_Editors_SfNumberBox_PlaceholderText) property. Watermark text will be displayed only when the value of the [AllowNull](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox.html#Syncfusion_UI_Xaml_Editors_SfNumberBox_AllowNull) property is **true** and the value of `NumberBox` control is **null**. The default value of `PlaceholderText` property is **string.Empty** (No string will be displayed).
 
 {% tabs %}
 {% highlight xaml %}
@@ -207,7 +280,7 @@ You can prompt the user with any information by using the [PlaceHolderText](http
 {% highlight C# %}
 
 SfNumberBox SfNumberBox= new SfNumberBox();
-SfNumberBox.PlaceHolderText = "Enter input here...";
+SfNumberBox.PlaceholderText = "Enter input here...";
 sfNumberBox.HorizontalAlignment = HorizontalAlignment.Center;
 sfNumberBox.VerticalAlignment = VerticalAlignment.Center;
 
@@ -215,6 +288,42 @@ sfNumberBox.VerticalAlignment = VerticalAlignment.Center;
 {% endtabs %}
 
 ![WinUI NumberBox Watermark Text](GettingStarted_images/watermark_text.png)
+
+## Clear button visibility 
+
+The `ShowClearButton` property is used to show or hide the clear button in `NumberBox`. By default, visibility of the clear button is enabled.
+
+N> The clear button appears only when the text box is focused and the `IsEditable` property value is set to **true**.
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumberBox x:Name="numberBox" 
+            Height="75" 
+            Width="300"                   
+            ShowClearButton="True" 
+            IsEditable="True" 
+            Value="10"/>
+
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfNumberBox SfNumberBox = new SfNumberBox();
+SfNumberBox.ShowClearButton = true;
+SfNumberBox.IsEditable = true; 
+
+
+{% endhighlight %}
+{% endtabs %}
+
+If IsEditable is true
+
+![WinUI NumberBox with Clear Button](GettingStarted_images/clearbutton_visible.png)
+
+If IsEditable is false
+
+![WinUI NumberBox without Clear Button](GettingStarted_images/clearbutton_collapsed.png)
+
 
 ## Value changed notification
 

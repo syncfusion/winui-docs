@@ -9,7 +9,7 @@ documentation: ug
 
 # Value formatting with WinUI NumberBox
 
-This section explains how to change the value format of the [NumberBox](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox) control using `NumberFormatter` and `CustomFormat` properties.
+This section explains how to change the value format of the [NumberBox](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox.html) control using `NumberFormatter` and `CustomFormat` properties.
 
 ## Currency, percentage and decimal format
 
@@ -148,28 +148,20 @@ hoursWorked.CustomFormat = "00.00##";
 
 ![WinUI NumberBox customize fractional digits](Formatting_images/winui-numberbox-apply-customformat.png)
 
-## Change culture
 
-By default, the culture value is updated based on the current application culture. Hence `NumberBox` control automatically formats itself based on current culture with a dollar (**$**) sign. You can apply different formats based on the cultural and regional settings using the [CultureInfo](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo?view=net-5.0) class.
+## Culture support
+
+The culture support allows the control to be configured for a specific language. To configure this, use the `culture` property.
 
 {% tabs %}
-{% highlight XAML %}
-
-<editors:SfNumberBox x:Name="sfNumberBox"
-                     HorizontalAlignment="Center" 
-                     VerticalAlignment="Center" 
-                     Value="10" />
-
-{% endhighlight %}
 {% highlight c# %}
 
-CultureInfo culture = new CultureInfo("fr-FR");
-sfNumberBox.NumberFormatter = new CurrencyFormatter(new RegionInfo(culture.LCID).ISOCurrencySymbol);
+CultureInfo ci = new CultureInfo("en-US");
+NumberBox.Culture = ci;
+         
 
 {% endhighlight %}
 {% endtabs %}
 
-![WinUI NumberBox culture based custom format](Formatting_images/winui-numberbox-apply-format-by-culture.png)
-
-
+![WinUI NumberBox culture based custom format](Formatting_images/winui-numberbox-culture_support.png)
 

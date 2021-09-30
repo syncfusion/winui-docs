@@ -13,7 +13,7 @@ This section explains the steps required to add the [WinUI TreeGrid](https://www
 
 ## Creating an application with WinUI TreeGrid
 
-1. Create a [WinUI 3 desktop app for C# and .NET 5](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/get-started-winui3-for-desktop) or [WinUI 3 app in UWP for C#](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/get-started-winui3-for-uwp).
+1. Create a [WinUI 3 desktop app for C# and .NET 5](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/get-started-winui3-for-desktop).
 
 2. Add reference to [Syncfusion.Grid.WinUI](https://www.nuget.org/packages/Syncfusion.Grid.WinUI) NuGet. 
 
@@ -444,10 +444,26 @@ Property of type Bool
 </tr>
 <tr>
 <td>
+TreeGridDateColumn
+</td>
+<td>
+Property of type DateTimeOffset
+</td>
+</tr>
+<tr>
+<td>
 TreeGridHyperLinkColumn
 </td>
 <td>
 Property of type Uri
+</td>
+</tr>
+<tr>
+<td>
+TreeGridNumericColumn
+</td>
+<td>
+Property of type DateTimeOffset
 </td>
 </tr>
 </table>
@@ -477,7 +493,7 @@ You can prevent the automatic column generation by setting [SfTreeGrid.AutoGener
 {% endhighlight %}
 {% endtabs %}
 
-Below are the list of column types provided in SfDataGrid.
+Below are the list of column types provided in SfTreeGrid.
 
 <table>
 <tr>
@@ -490,42 +506,66 @@ Comments
 </tr>
 <tr>
 <td>
-GridTextColumn
+TreeGridTextColumn
 </td>
 <td>
-Represents SfDataGrid column that hosts textual content in its cells.
-</td>
-</tr>
-<tr>
-<td>
-GridComboBoxColumn
-</td>
-<td>
-Represents SfDataGrid column that hosts <code>ComboBox</code> controls in its cells.
+Represents SfTreeGrid column that hosts textual content in its cells.
 </td>
 </tr>
 <tr>
 <td>
-GridCheckBoxColumn
+TreeGridComboBoxColumn
 </td>
 <td>
-Represents SfDataGrid column that hosts <code>CheckBox</code> controls in its cells.
-</td>
-</tr>
-<tr>
-<td>
-GridHyperlinkColumn
-</td>
-<td>
-Represents SfDataGrid column that hosts <code>HyperlinkButton</code> controls in its cells.
+Represents SfTreeGrid column that hosts <code>ComboBox</code> controls in its cells.
 </td>
 </tr>
 <tr>
 <td>
-GridTemplateColumn
+TreeGridCheckBoxColumn
 </td>
 <td>
-Represents SfDataGrid column that hosts template-specified content in its cells
+Represents SfTreeGrid column that hosts <code>CheckBox</code> controls in its cells.
+</td>
+</tr>
+<tr>
+<td>
+TreeGridDateColumn
+</td>
+<td>
+Represents SfTreeGrid column that hosts {{'[SfCalendarDatePicker](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Calendar.SfCalendarDatePicker.html)'| markdownify }} controls in its cells which is used to display and format Date values.
+</td>
+</tr>
+<tr>
+<td>
+TreeGridHyperlinkColumn
+</td>
+<td>
+Represents SfTreeGrid column that hosts <code>HyperlinkButton</code> controls in its cells.
+</td>
+</tr>
+<tr>
+<td>
+TreeGridNumericColumn
+</td>
+<td>
+Represents SfTreeGrid column that hosts {{'[SfNumberBox](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox.html)'| markdownify }} controls in its cells which is used to format and display Numeric values.
+</td>
+</tr>
+<tr>
+<td>
+TreeGridTemplateColumn
+</td>
+<td>
+Represents SfTreeGrid column that hosts template-specified content in its cells
+</td>
+</tr>
+<tr>
+<td>
+TreeGridTimeColumn
+</td>
+<td>
+Represents SfTreeGrid column that hosts {{'[SfTimePicker](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfTimePicker.html)'| markdownify }} controls in its cells which is used to format and display Time values.
 </td>
 </tr>
 </table>

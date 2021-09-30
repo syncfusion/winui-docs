@@ -9,7 +9,7 @@ documentation: ug
 
 # UpDown Button (SpinButton) in WinUI NumberBox
 
-This section describes how to change value in the [NumberBox]([NumberBox](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox)) control using keys, mouse scrolling and the up-down button.
+This section describes how to change value in the [NumberBox](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.SfNumberBox.html) control using keys, mouse scrolling and the up-down button.
 
 ## Increase or decrease value
 
@@ -30,7 +30,7 @@ N> The value in `NumberBox` can also be changed by mouse scrolling. The mouse sc
 {% highlight C# %}
 
 SfNumberBox SfNumberBox= new SfNumberBox();
-SfNumberBox.PlaceHolderText = "Enter input here...";
+SfNumberBox.PlaceholderText = "Enter input here...";
 sfNumberBox.HorizontalAlignment = HorizontalAlignment.Center;
 sfNumberBox.VerticalAlignment = VerticalAlignment.Center;
 
@@ -64,4 +64,41 @@ sfNumberBox.UpDownPlacementMode = NumberBoxUpDownPlacementMode.Inline;
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Placement in WinUI NumberBox](SpinButton_images/spinbuttonPlacement_img.png)
+![UpDown Placement in WinUI NumberBox](SpinButton_images/spinbuttonPlacement_img.gif)
+
+## TextBox visibility
+
+The `TextBoxVisibility` property can be used to hide or show the visibility of a text box in a number box.
+When the text box visibility is collapsed, only the UpDown buttons are visible. You can change the control values by using the UpDown buttons.
+
+
+
+N> This feature is enabled when the UpDownPlacementMode value is **Inline**.
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumberBox x:Name="numberBox"
+                     Height="75" 
+                     Width="300"
+                     TextBoxVisibility="Collapsed"
+                     UpDownPlacementMode="Inline"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumberBox SfNumberBox = new SfNumberBox();
+SfNumberBox.TextBoxVisibility = Visibility.Collapsed;
+SfNumberBox.UpDownPlacementMode = NumberBoxUpDownPlacementMode.Inline;
+
+
+{% endhighlight %}
+{% endtabs %}
+
+If the TextBoxVisibility value is collapsed,
+
+![WinUI NumberBox with TextBox collapsed](SpinButton_images/textbox_visibility_collapsed.gif)
+
+If the TextBoxVisibility value is Visible,
+
+![WinUI NumberBox with TextBox Visible](SpinButton_images/textbox_visibility_visible.png)
