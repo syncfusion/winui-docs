@@ -18,21 +18,19 @@ The `ComboBox` control header can be changed by using the [Header](https://help.
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfComboBox
-    Width="250"
-    Header="Favourite Social Media"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name"
-    SelectedIndex="2"
-    x:Name="comboBox">
+<editors:SfComboBox x:Name="comboBox"
+                    Width="250"
+                    Header="Favourite Social Media"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    SelectedIndex="2">
     <editors:SfComboBox.HeaderTemplate>
         <DataTemplate>
-            <TextBlock
-                Foreground="Red"
-                FontWeight="SemiBold"
-                FontSize="16"
-                Text="{Binding}" />
+            <TextBlock Foreground="Red"
+                       FontWeight="SemiBold"
+                       FontSize="16"
+                       Text="{Binding}" />
         </DataTemplate>
     </editors:SfComboBox.HeaderTemplate>
 </editors:SfComboBox>
@@ -49,22 +47,20 @@ The `ComboBox` control description can be changed by using the [Description](htt
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfComboBox
-    Width="280"
-    Header="Favourite Social Media"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name"
-    SelectedIndex="2"
-    Description="Instagram is an online photo sharing service."
-    x:Name="comboBox">
+<editors:SfComboBox x:Name="comboBox"
+                    Width="280"
+                    Header="Favourite Social Media"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    SelectedIndex="2"
+                    Description="Instagram is an online photo sharing service.">
     <editors:SfComboBox.HeaderTemplate>
         <DataTemplate>
-            <TextBlock
-                Foreground="Red"
-                FontWeight="SemiBold"
-                FontSize="16"
-                Text="{Binding}" />
+            <TextBlock Foreground="Red"
+                       FontWeight="SemiBold"
+                       FontSize="16"
+                       Text="{Binding}" />
         </DataTemplate>
     </editors:SfComboBox.HeaderTemplate>
 </editors:SfComboBox>
@@ -81,13 +77,12 @@ You can prompt the user with any information by using the [PlaceholderText](http
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox
-    Width="250"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name"
-    PlaceholderText="Select a social media"
-    x:Name="comboBox"/>
+<editors:SfComboBox x:Name="comboBox"
+                    Width="250"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    PlaceholderText="Select a social media" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -106,14 +101,13 @@ The placeholder texts’ foreground can be changed by using the [PlaceholderFore
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox
-    Width="250"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name"
-    PlaceholderForeground="Red"
-    PlaceholderText="Select a social media"
-    x:Name="comboBox"/>
+<editors:SfComboBox x:Name="comboBox"
+                    Width="250"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    PlaceholderForeground="Red"
+                    PlaceholderText="Select a social media" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -134,15 +128,14 @@ N> `TextBoxStyle` will only have an effect in single selection editable mode.
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfComboBox
-    Width="250"
-    IsEditable="True"
-    SelectionMode="Single"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name"
-    ShowClearButton="False"
-    x:Name="comboBox">
+<editors:SfComboBox x:Name="comboBox"
+                    Width="250"
+                    IsEditable="True"
+                    SelectionMode="Single"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    ShowClearButton="False">
     <editors:SfComboBox.TextBoxStyle>
         <Style TargetType="TextBox">                   
             <Style.Setters>              
@@ -165,14 +158,13 @@ The `ComboBox` control allows you to customize the style of [ComboBoxItem](https
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfComboBox
-    Width="250"
-    IsEditable="True"
-    ItemsSource="{Binding SocialMedias}"
-    DisplayMemberPath="Name"
-    TextMemberPath="Name"
-    PlaceholderText="Select a social media"
-    x:Name="comboBox">
+<editors:SfComboBox x:Name="comboBox"
+                    Width="250"
+                    IsEditable="True"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    PlaceholderText="Select a social media">
     <editors:SfComboBox.ItemContainerStyle>
         <Style TargetType="editors:SfComboBoxItem">
             <Setter Property="Foreground" Value="Red"/>
@@ -237,14 +229,13 @@ public class SocialMediaStyleSelector : StyleSelector
                                         MediaStyle2="{StaticResource MediaStyle2}"/>
     </Grid.Resources>
     <editors:SfComboBox x:Name="comboBox"
-        Width="250"
-        PlaceholderText="Select a social media"
-        IsEditable="True" 
-        ItemsSource="{Binding SocialMedias}"
-        ItemContainerStyleSelector="{StaticResource socialMediaStyleSelector}"
-        DisplayMemberPath="Name"
-        TextMemberPath="Name">
-    </editors:SfComboBox>
+                        Width="250"
+                        PlaceholderText="Select a social media"
+                        IsEditable="True" 
+                        ItemsSource="{Binding SocialMedias}"
+                        ItemContainerStyleSelector="{StaticResource socialMediaStyleSelector}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name" />
 </Grid>
 
 {% endhighlight %}
@@ -314,44 +305,38 @@ public class EmployeeViewModel
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfComboBox
-    x:Name="comboBox"
-    Width="250"
-    TextMemberPath="Name"
-    IsEditable="True"
-    ItemsSource="{Binding Employees}">
+<editors:SfComboBox x:Name="comboBox"
+                    Width="250"
+                    TextMemberPath="Name"
+                    IsEditable="True"
+                    ItemsSource="{Binding Employees}">
     <editors:SfComboBox.DataContext>
         <local:EmployeeViewModel/>
     </editors:SfComboBox.DataContext>
     <editors:SfComboBox.ItemTemplate>
         <DataTemplate>
-            <Grid
-                Margin="0,5"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch">
+            <Grid Margin="0,5"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="48"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image 
-                    Grid.Column="0"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center" 
-                    Source="{Binding ProfilePicture}" 
-                    Stretch="Uniform"/>
-                <StackPanel
-                    Grid.Column="1"
-                    Margin="15,0,0,0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center">
-                    <TextBlock 
-                        Opacity="0.87"
-                        FontSize="14"
-                        Text="{Binding Name}"/>
-                    <TextBlock 
-                        Opacity="0.54"
-                        FontSize="12"
-                        Text="{Binding Designation}"/>
+                <Image Grid.Column="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" 
+                       Source="{Binding ProfilePicture}" 
+                       Stretch="Uniform"/>
+                <StackPanel Grid.Column="1"
+                            Margin="15,0,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center">
+                    <TextBlock Opacity="0.87"
+                               FontSize="14"
+                               Text="{Binding Name}"/>
+                    <TextBlock Opacity="0.54"
+                               FontSize="12"
+                               Text="{Binding Designation}"/>
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -501,20 +486,18 @@ public class EmployeeTemplateSelector : DataTemplateSelector
             </Grid>
         </DataTemplate>
 
-        <local:EmployeeTemplateSelector
-            x:Key="employeeTemplateSelector"
-            EmployeeTemplate1="{StaticResource employeeTemplate1}"
-            EmployeeTemplate2="{StaticResource employeeTemplate2}"/>
+        <local:EmployeeTemplateSelector x:Key="employeeTemplateSelector"
+                                        EmployeeTemplate1="{StaticResource employeeTemplate1}"
+                                        EmployeeTemplate2="{StaticResource employeeTemplate2}"/>
     </Grid.Resources>
     
-    <editors:SfComboBox 
-        Width="250" 
-        TextMemberPath="Name"
-        ItemsSource="{Binding Employees}"
-        PlaceholderText="Select an employee"
-        IsEditable="True"            
-        ItemTemplateSelector="{StaticResource employeeTemplateSelector}"
-        x:Name="comboBox">
+    <editors:SfComboBox x:Name="comboBox"
+                        Width="250" 
+                        TextMemberPath="Name"
+                        ItemsSource="{Binding Employees}"
+                        PlaceholderText="Select an employee"
+                        IsEditable="True"            
+                        ItemTemplateSelector="{StaticResource employeeTemplateSelector}">
         <editors:SfComboBox.DataContext>
             <local:EmployeeViewModel/>
         </editors:SfComboBox.DataContext>
@@ -525,6 +508,314 @@ public class EmployeeTemplateSelector : DataTemplateSelector
 {% endtabs %}
 
 ![Different custom UI of ComboBoxItem using ItemTemplateSelector](Styling_images/winui-combobox-itemtemplateselector.png)
+
+## Styling token items
+
+The ComboBox control allows you to customize the style of [ComboBoxTokenItem](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.ComboBoxTokenItem.html) generated in the selection area by using the [TokenItemStyle](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.DropDownListBase.html#Syncfusion_UI_Xaml_Editors_DropDownListBase_TokenItemStyle) property. The default value of `TokenItemStyle` is `null`. 
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfComboBox SelectionMode="Multiple"
+                    MultiSelectionDisplayMode="Token"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name">
+            <editors:SfComboBox.TokenItemStyle>
+                <Style TargetType="editors:ComboBoxTokenItem">
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="Background" Value="LightCyan"/>
+                </Style>
+            </editors:SfComboBox.TokenItemStyle>
+</editors:SfComboBox>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Custom UI of ComboBoxTokenItem using TokenItemStyle](Styling_images/winui-combobox-tokenitemstyle.png)
+
+### Style token items based on condition   
+
+The ComboBox control allows you to customize the style of `ComboBoxTokenItem` conditionally based on its content by using the [TokenItemStyleSelector](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.DropDownListBase.html?tabs=tabid-1#Syncfusion_UI_Xaml_Editors_DropDownListBase_TokenItemStyleSelector) property. The default value of `TokenItemStyleSelector` is `null`. 
+
+{% tabs %}
+{% highlight c# %}
+
+public class SocialMediaStyleSelector : StyleSelector
+{
+    public Style MediaStyle1 { get; set; }
+    public Style MediaStyle2 { get; set; }
+    protected override Style SelectStyleCore(object item, DependencyObject container)
+    {
+        var mediaItem = (item as SocialMedia).Name;
+        if (mediaItem.ToString() == "Facebook" || mediaItem.ToString() == "Instagram" ||
+            mediaItem.ToString() == "Twitter" || mediaItem.ToString() == "WhatsApp" ||
+            mediaItem.ToString() == "Skype")
+        {
+            return MediaStyle1;
+        }           
+        else
+        {
+            return MediaStyle2;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight XAML %}
+
+<Grid>
+    <Grid.Resources>
+        <Style x:Key="MediaStyle1" TargetType="editors:ComboBoxTokenItem">
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="Background" Value="LightCyan"/>
+            <Setter Property="Content" Value="{Binding}"/>
+        </Style>
+        <Style x:Key="MediaStyle2" TargetType="editors:ComboBoxTokenItem">
+            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="Background" Value="LightCyan"/>
+            <Setter Property="Content" Value="{Binding}"/>
+        </Style>
+        <local:SocialMediaStyleSelector x:Key="socialMediaStyleSelector" 
+                                        MediaStyle1="{StaticResource MediaStyle1}"
+                                        MediaStyle2="{StaticResource MediaStyle2}"/>
+    </Grid.Resources>
+    <editors:SfComboBox SelectionMode="Multiple"                    
+                        MultiSelectionDisplayMode="Token"
+                        ItemsSource="{Binding SocialMedias}"
+                        TokenItemStyleSelector="{StaticResource socialMediaStyleSelector}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name" />
+</Grid>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Different custom UI of ComboBoxTokenItem using TokenItemStyleSelector](Styling_images/winui-combobox-tokenitemstyleselector.png)
+
+## Templating ComboBox tokens 
+
+The [TokenItemTemplate](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.DropDownListBase.html?tabs=tabid-1#Syncfusion_UI_Xaml_Editors_DropDownListBase_TokenItemTemplate) property helps you to decorate token items using the custom templates. The default value of `TokenItemTemplate` is `null`. The following example shows how to add image or custom control in token items using templates.
+
+{% tabs %}
+{% highlight C# %}
+
+//Model.cs
+public class CountryInfo
+{
+    public string CountryName { get; set; }
+    public BitmapImage FlagImage { get; set; }
+}
+
+//ViewModel.cs
+public class CountryViewModel
+{
+    public ObservableCollection<CountryInfo> Countries { get; set; }
+    public EmployeeViewModel()
+    {
+        this.Countries = new ObservableCollection<CountryInfo>();
+        this.Countries.Add(new CountryInfo
+        {
+            FlagImage = new BitmapImage(new Uri(@"ms-appx:///Flags/UnitedStates.png", UriKind.RelativeOrAbsolute)),
+            CountryName = "United States"
+        });       
+
+        this.Countries.Add(new CountryInfo
+        {
+            FlagImage = new BitmapImage(new Uri(@"ms-appx:///Flags/turkey.png", UriKind.RelativeOrAbsolute)),
+            CountryName = "Turkey"
+        });
+
+        this.Countries.Add(new CountryInfo
+        {
+            FlagImage = new BitmapImage(new Uri(@"ms-appx:///Flags/Mexico.png", UriKind.RelativeOrAbsolute)),
+            CountryName = "Mexico"
+        });
+
+        this.Countries.Add(new CountryInfo
+        {
+            FlagImage = new BitmapImage(new Uri(@"ms-appx:///Flags/Basque.png", UriKind.RelativeOrAbsolute)),
+            CountryName = "Basque"
+        });
+
+        this.Countries.Add(new CountryInfo
+        {
+            FlagImage = new BitmapImage(new Uri(@"ms-appx:///Flags/India.png", UriKind.RelativeOrAbsolute)),
+            CountryName = "India"
+        });
+
+        this.Countries.Add(new CountryInfo
+        {
+            FlagImage = new BitmapImage(new Uri(@"ms-appx:///Flags/Portugal.png", UriKind.RelativeOrAbsolute)),
+            CountryName = "Portugal"
+        });
+
+        this.Countries.Add(new CountryInfo
+        {
+            FlagImage = new BitmapImage(new Uri(@"ms-appx:///Flags/UnitedKingdom.png", UriKind.RelativeOrAbsolute)),
+            CountryName = "United Kingdom"
+        });
+
+        this.Countries.Add(new CountryInfo
+        {
+            FlagImage = new BitmapImage(new Uri(@"ms-appx:///Flags/france.png", UriKind.RelativeOrAbsolute)),
+            CountryName = "France"
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfComboBox SelectionMode="Multiple"
+                    MultiSelectionDisplayMode="Token"
+                    PlaceholderText="Select countries"
+                    DisplayMemberPath="CountryName"
+                    ItemsSource="{Binding Countries}">
+        <editors:SfComboBox.DataContext>
+            <local:CountryViewModel/>
+        </editors:SfComboBox.DataContext>
+        <editors:SfComboBox.TokenItemTemplate>
+            <DataTemplate>
+                <Grid HorizontalAlignment="Center"
+                      VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0"    
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" 
+                               Source="{Binding FlagImage}" 
+                               Width="36" Height="20"
+                               Stretch="Uniform"/>
+
+                        <TextBlock  Margin="8,0,0,0"
+                                    Grid.Column="1" 
+                                    TextAlignment="Center"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center" 
+                                    Text="{Binding CountryName}"/>
+                </Grid>
+            </DataTemplate>
+        </editors:SfComboBox.TokenItemTemplate>
+</editors:SfComboBox>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Custom UI of ComboBoxTokenItem using TokenItemTemplate](Styling_images/winui-combobox-tokenitemtemplate.png)
+
+### Templating ComboBox tokens based on condition
+
+The [TokenItemTemplateSelector](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Editors.DropDownListBase.html#Syncfusion_UI_Xaml_Editors_DropDownListBase_TokenItemTemplateSelector) property helps you to decorate token items conditionally based on its content using the custom templates. The default value of `TokenItemTemplateSelector` is `null`.
+
+{% tabs %}
+{% highlight C# %}
+
+public class CountryTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate CountryTemplate1 { get; set; }
+    public DataTemplate CountryTemplate2 { get; set; }
+    
+    protected override DataTemplate SelectTemplateCore(object item, DependencyObject container)
+    {
+        var countryName = (item as CountryInfo).CountryName;
+        if (countryName.ToString() == "United States" || countryName.ToString() == "Mexico" ||
+            countryName.ToString() == "India" || countryName.ToString() == "United Kingdom")
+        {
+            return CountryTemplate1;
+        }
+        else
+        {
+            return CountryTemplate2;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight XAML %}
+
+<Grid>
+    <Grid.DataContext>
+        <local:CountryViewModel/>
+    </Grid.DataContext> 
+    <Grid.Resources>
+        <DataTemplate x:Key="countryTemplate1">
+            <Grid HorizontalAlignment="Center"
+                  VerticalAlignment="Center">
+                  <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="auto"/>
+                      <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+                  <Image Grid.Column="0"    
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center" 
+                         Source="{Binding FlagImage}" 
+                         Width="36" Height="20"
+                         Stretch="Uniform"/>
+
+                  <TextBlock  Margin="8,0,0,0"
+                              Grid.Column="1" 
+                              Foreground="DarkBlue"
+                              FontStyle="Italic"
+                              TextAlignment="Center"
+                              HorizontalAlignment="Left"
+                              VerticalAlignment="Center" 
+                              Text="{Binding CountryName}"/>
+            </Grid>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="countryTemplate2">
+            <Grid HorizontalAlignment="Center"
+                  VerticalAlignment="Center">
+                  <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="auto"/>
+                      <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+                  <Image Grid.Column="0"    
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center" 
+                         Source="{Binding FlagImage}" 
+                         Width="36" Height="20"
+                         Stretch="Uniform"/>
+
+                  <TextBlock  Margin="8,0,0,0"
+                              Grid.Column="1" 
+                              Foreground="Red"
+                              FontStyle="Italic"
+                              TextAlignment="Center"
+                              HorizontalAlignment="Left"
+                              VerticalAlignment="Center" 
+                              Text="{Binding CountryName}"/>
+            </Grid>
+        </DataTemplate>
+
+        <local:CountryTemplateSelector x:Key="countryTemplateSelector"
+                                       CountryTemplate1="{StaticResource countryTemplate1}"
+                                       CountryTemplate2="{StaticResource countryTemplate2}"/>
+    </Grid.Resources>
+    
+    <editors:SfComboBox SelectionMode="Multiple"
+                        MultiSelectionDisplayMode="Token"
+                        DisplayMemberPath="CountryName"
+                        TokenItemTemplateSelector="{StaticResource countryTemplateSelector}"
+                        ItemsSource="{Binding Countries}" />
+</Grid>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Different custom UI of ComboBoxTokenItem using TokenItemTemplateSelector](Styling_images/winui-combobox-tokenitemtemplateselector.png)
 
 ## How to change DropDown MaxHeight
 
@@ -541,8 +832,7 @@ The maximum height of the drop-down can be changed by using the [MaxDropDownHeig
                     MaxDropDownHeight="208"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
-                    TextMemberPath="Name">
-</editors:SfComboBox>
+                    TextMemberPath="Name" />
 
 {% endhighlight %}
 {% highlight C# %}
